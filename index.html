@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <h1>Formulario de Registro</h1>
+    <p>Preencha o Formulario com as informações solicitadas</p>
+    <form method="post" acttion="https://register-demo.freecodecamp.org">
+        <fieldset>
+        <label for="first-name">Digite seu Nome: <input id ="first-name" name="first-name" type="text" required/></label>
+        <label for="last-name">Digite seu Sobrenome: <input type="text" id="last-name" name="last-name" required/></label>
+        <label for="email">Digite seu Email: <input id="email" name="email" type="email" required /></label>
+        <label for="new-password">Crie uma senha: <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required /></label>
+    </fieldset>
+    <fieldset>
+        <label for="personal-account"><input id="personal-account" type="radio" name="account-type" class="inline" /> Conta pessoal</label>
+        <label for="business-account"><input id="business-account" type="radio" name="account-type" class="inline" /> Conta profissional</label>
+        <label for="terms-and-conditions">
+          <input id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" class="inline" /> Eu aceito os <a href="https://www.freecodecamp.org/news/terms-of-service/">termos e condições</a>
+        </label>
+      </fieldset>
+      <fieldset>
+        <label for="profile-picture">Envie uma imagem de perfil: <input id="profile-picture" type="file" name="file" /></label>
+        <label for="age">Digite sua idade: <input id="age" type="number" name="age" min="13" max="120" /></label>
+        <label for="referrer">Como você soube de nós?
+          <select id="referrer" name="referrer">
+            <option value="">(selecione uma opção)</option>
+            <option value="1">Noticiario</option>
+            <option value="2">YouTube</option>
+            <option value="3">Forum</option>
+            <option value="4">Outro</option>
+          </select>
+        </label>
+        <label for="bio">forneça uma biografia:
+          <textarea id="bio" name="bio" rows="3" cols="30" placeholder="Eu gosto de trabalhar na praia..."></textarea>
+        </label>
+      </fieldset>
+      <input type="submit" value="Submit" />
+    </form>
+</body>
+</html>
